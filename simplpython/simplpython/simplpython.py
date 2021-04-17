@@ -1,4 +1,4 @@
-class ezypython:
+class simplpython:
     def display(text: str):
         print(text)
 

@@ -1,1 +1,1 @@
-from .ezypython import ezypython
+from .simplpython import simplpython
