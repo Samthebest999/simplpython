@@ -1,15 +1,23 @@
 class simplpython:
-    def display(text: str):
+    def display(*text: str):
         print(text)
 
-    def files_io(filename, mode, text: str):
-        if "r" in mode:
+    def files_io(filename, mode, *text: str):
+        if "r" == mode:
             global file_text
             file_text = open(filename, "r").read()
-        if "w" in mode:
+        if "w" == mode:
             open(filename, "w").write(text)
+        if "rb" == mode:
+            global file_text
+            file_text = open(filename, "rb").read()
+        if "rt" == mode:
+            global file_text
+            file_text = open(filename, "rt").read()
+        if "a" == mode:
+            open(filename, "a").write(text)
 
-    def TTS(speak: str, language: str, slow_true_or_false: bool):
+    def TTS(speak: str, language: str, slow: bool):
         from gtts import gTTS
         from playsound import playsound
         import os
