@@ -6,4 +6,4 @@
 1. Test by running `sp.display("Hi, Does this work?")` if the output is `Hi, Does this work?` It **WORKED!**
 > This package gets updated regularly (Like WAAAY Too much)
 ## Actual Docs:
-- display()
+- display(): displays something in the command line `COBOL`
