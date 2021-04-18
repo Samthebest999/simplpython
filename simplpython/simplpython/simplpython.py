@@ -3,18 +3,18 @@ class simplpython:
         print(text)
 
     def files_io(filename, mode, *text: str):
-        if "r" == mode:
+        if mode == "r":
             global file_text
             file_text = open(filename, "r").read()
-        if "w" == mode:
+        if mode == "w":
             open(filename, "w").write(text)
-        if "rb" == mode:
+        if mode == "rb":
             global file_text
             file_text = open(filename, "rb").read()
-        if "rt" == mode:
+        if mode == "rt":
             global file_text
             file_text = open(filename, "rt").read()
-        if "a" == mode:
+        if mode == "a":
             open(filename, "a").write(text)
 
     def TTS(speak: str, language: str, slow: bool):

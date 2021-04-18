@@ -1,7 +1,7 @@
 from setuptools import setup
 setup(
     name='simplpython',
-    version='0.6',
+    version='0.7',
     author = "Sam M",
     long_description = "Go To [simplpython Github](https://github.com/Samthebest999/simplpython)",
     description='simplpython | The simpler way of Pythoning',
