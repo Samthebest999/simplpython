@@ -4,18 +4,20 @@ class simplpython:
 
     def files_io(self, filename, mode, *text: str):
         if mode == "r":
-            global file_text
             file_text = open(filename, "r").read()
+            return file_text
         if mode == "w":
-            open(filename, "w").write(text)
+            for content in text:
+                open(filename, "w").write(content)
         if mode == "rb":
-            global file_text
             file_text = open(filename, "rb").read()
+            return file_text
         if mode == "rt":
-            global file_text
             file_text = open(filename, "rt").read()
+            return file_text
         if mode == "a":
-            open(filename, "a").write(text)
+            for content in text:
+                open(filename, "a").write(content)
 
     def TTS(self, speak: str, language: str, slow: bool):
         from gtts import gTTS
